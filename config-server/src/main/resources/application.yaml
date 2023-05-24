@@ -12,7 +12,6 @@ spring:
         git:
           uri: https://github.com/Serener-D/JavaAdv
           searchPaths: "/configs/{application}/{profile}"
-          default-label: main
 
 eureka:
   client:
