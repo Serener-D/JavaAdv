@@ -10,7 +10,7 @@ spring:
   profiles:
     active: dev
   application:
-    name: config-client
+    name: client-service
   config:
     import: "optional:configserver:"
   cloud:
