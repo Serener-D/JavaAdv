@@ -7,6 +7,11 @@ eureka:
 server:
   port: 8891
 spring:
+  zipkin:
+    enabled: true
+  sleuth:
+    sampler:
+      probability: 2.0
   main:
     web-application-type: reactive
   application:

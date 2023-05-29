@@ -7,6 +7,11 @@ eureka:
 server:
   port: 8890
 spring:
+  zipkin:
+    enabled: true
+  sleuth:
+    sampler:
+      probability: 2.0
   data:
     mongodb:
       host: localhost
