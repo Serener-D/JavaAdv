@@ -19,7 +19,7 @@ public class ContextListener implements ApplicationListener<ApplicationStartedEv
     public void onApplicationEvent(ApplicationStartedEvent event) {
         long counter = 0;
         while (true) {
-            bookProducer.sendMessage(Book.builder().id(counter++).build());
+            bookProducer.sendMessage(Book.builder().id(counter++).status(Book.Status.UNCHECKED).build());
             Thread.sleep(10000);
         }
     }

@@ -4,9 +4,5 @@ spring:
       bindings:
         input:
           group: group
-          destination: book1
-          contentType: application/json
-        output:
-          group: group
           destination: book2
           contentType: application/json

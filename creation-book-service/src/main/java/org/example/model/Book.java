@@ -18,7 +18,7 @@ public class Book implements Serializable {
     private Status status = Status.UNCHECKED;
     private String price;
 
-    private enum Status {
+    public enum Status {
         UNCHECKED, CHECKED
     }
 }
