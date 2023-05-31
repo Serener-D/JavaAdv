@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import java.util.function.Consumer;
+import java.util.function.Function;
 
 @SpringBootApplication
 public class CheckBookServiceApplication {
@@ -15,7 +15,11 @@ public class CheckBookServiceApplication {
     }
 
     @Bean
-    public Consumer<Book> bookConsumer() {
-        return book -> System.out.println("Received book: " + book);
+    public Function<Book, Book> bookConsumerAndProducer() {
+        return book -> {
+            System.out.println("Received book: " + book);
+            book.setStatus(Book.Status.CHECKED);
+            return book;
+        };
     }
 }

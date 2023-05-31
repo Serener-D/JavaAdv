@@ -1,8 +1,10 @@
 spring:
   cloud:
+    function:
+      definition: bookConsumer
     stream:
       bindings:
-        input:
+        bookConsumer-in-0:
           group: group
           destination: book2
           contentType: application/json
