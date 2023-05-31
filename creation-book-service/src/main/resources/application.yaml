@@ -1,11 +1,15 @@
 spring:
   cloud:
+    function:
+      definition: bookProducer
     stream:
+      poller:
+        fixedDelay: 10000
       kafka:
         binder:
           brokers: localhost:9092
       bindings:
-        output:
+        bookProducer-out-0:
           group: group
           destination: book1
           contentType: application/json
