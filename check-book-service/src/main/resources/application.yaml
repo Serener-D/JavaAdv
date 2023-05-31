@@ -3,5 +3,6 @@ spring:
     stream:
       bindings:
         input:
-          destination: test
-#          contentType: application/json
+          group: group
+          destination: book1
+          contentType: application/json

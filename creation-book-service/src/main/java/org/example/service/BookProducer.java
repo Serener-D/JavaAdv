@@ -1,5 +1,6 @@
 package org.example.service;
 
+import org.example.model.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.annotation.Output;
@@ -15,9 +16,9 @@ public class BookProducer {
     private Source source;
 
     @Output("test")
-    public void sendMessage(String book) {
+    public void sendMessage(Book book) {
         System.out.println("Sending: " + book);
-        source.output().send(MessageBuilder.withPayload("book").build());
+        source.output().send(MessageBuilder.withPayload(book).build());
     }
 
 }
