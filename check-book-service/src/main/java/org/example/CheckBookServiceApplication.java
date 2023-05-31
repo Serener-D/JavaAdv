@@ -1,6 +1,5 @@
 package org.example;
 
-import org.example.model.Book;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.stream.annotation.EnableBinding;
@@ -16,7 +15,7 @@ public class CheckBookServiceApplication {
     }
 
     @StreamListener(Sink.INPUT)
-    public void handleMessage(Book message) {
+    public void handleMessage(String message) {
         System.out.println("Received message: " + message);
     }
 }

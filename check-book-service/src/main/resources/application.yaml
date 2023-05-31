@@ -3,5 +3,5 @@ spring:
     stream:
       bindings:
         input:
-          destination: book
-          contentType: application/json
+          destination: test
+#          contentType: application/json
