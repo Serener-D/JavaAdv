@@ -2,7 +2,6 @@ spring:
   cloud:
     stream:
       bindings:
-        brokers: localhost:19092
         output:
           destination: book
           contentType: application/json
