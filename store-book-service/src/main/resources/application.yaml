@@ -1,5 +1,15 @@
+server:
+  port: 8869
 spring:
+  application:
+    name: store-book-service
+  profiles:
+    active: dev
   cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server
     function:
       definition: bookConsumer
     stream:
